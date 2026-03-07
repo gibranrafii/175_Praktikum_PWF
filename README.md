@@ -4,3 +4,4 @@
 ### Daftar Modul
 - [Praktikum 1](Praktikum1.md)
 - [Praktikum 2](Praktikum2.md)
+- [Praktikum 3](Praktikum3.md)
