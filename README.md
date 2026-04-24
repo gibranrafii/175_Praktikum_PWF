@@ -8,3 +8,4 @@
 - [Praktikum 4](Praktikum4.md)
 - [Praktikum 5](Praktikum5.md)
 - [Praktikum 6](Praktikum6.md)
+- [Praktikum 7](Praktikum7.md)
