@@ -21,6 +21,11 @@
                     <x-nav-link :href="route('product.index')" :active="str_starts_with(request()->route()->getName() ?? '', 'product.')">
                         {{ __('Products') }}
                     </x-nav-link>
+                    @can('view-category')
+                        <x-nav-link :href="route('category.index')" :active="str_starts_with(request()->route()->getName() ?? '', 'category.')">
+                            {{ __('Category') }}
+                        </x-nav-link>
+                    @endcan
                 </div>
             </div>
 
@@ -89,6 +94,11 @@
             <x-responsive-nav-link :href="route('product.index')" :active="str_starts_with(request()->route()->getName() ?? '', 'product.')">
                 {{ __('Products') }}
             </x-responsive-nav-link>
+            @can('view-category')
+                <x-responsive-nav-link :href="route('category.index')" :active="str_starts_with(request()->route()->getName() ?? '', 'category.')">
+                    {{ __('Category') }}
+                </x-responsive-nav-link>
+            @endcan
         </div>
 
         <!-- Responsive Settings Options -->

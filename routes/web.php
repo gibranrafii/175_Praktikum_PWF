@@ -31,6 +31,16 @@ Route::middleware('auth')->group(function () {
     Route::put('/product/update/{id}', [ProductController::class, 'update'])->name('product.update');
     Route::get('/product/edit/{product}', [ProductController::class, 'edit'])->name('product.edit');
     Route::delete('/product/delete/{id}', [ProductController::class, 'delete'])->name('product.delete');
+
+    // Category Routes (Admin Only)
+    Route::middleware('can:view-category')->group(function () {
+        Route::get('/category', [App\Http\Controllers\CategoryController::class, 'index'])->name('category.index');
+        Route::get('/category/create', [App\Http\Controllers\CategoryController::class, 'create'])->name('category.create');
+        Route::post('/category', [App\Http\Controllers\CategoryController::class, 'store'])->name('category.store');
+        Route::get('/category/edit/{category}', [App\Http\Controllers\CategoryController::class, 'edit'])->name('category.edit');
+        Route::put('/category/update/{category}', [App\Http\Controllers\CategoryController::class, 'update'])->name('category.update');
+        Route::delete('/category/delete/{category}', [App\Http\Controllers\CategoryController::class, 'destroy'])->name('category.destroy');
+    });
 });
 
 Route::get('/about', [AboutController::class, 'index'])->name('about');

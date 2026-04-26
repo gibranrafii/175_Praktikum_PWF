@@ -22,5 +22,9 @@ class AppServiceProvider extends ServiceProvider
         \Illuminate\Support\Facades\Gate::define('export-product', function (\App\Models\User $user) {
             return $user->role === 'admin';
         });
+
+        \Illuminate\Support\Facades\Gate::define('view-category', function (\App\Models\User $user) {
+            return $user->role === 'admin';
+        });
     }
 }
