@@ -11,3 +11,4 @@
 - [Praktikum 5](Praktikum5.md)
 - [Praktikum 6](Praktikum6.md)
 - [Praktikum 7](Praktikum7.md)
+- [Praktikum 9](Praktikum9.md)
